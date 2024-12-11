@@ -63,6 +63,20 @@ public class linkedlist {
             System.out.println("Deleted " + data);
         }
         
+//        public void deleteAt(int index) {
+//            if (head == null) {
+//                System.out.println("list is empty");
+//                return;
+//            }
+//            Node currNode = head;
+//            Node prevNode = null;
+//            for (int i = 0; i < index; i++) {
+//                prevNode = currNode;
+//                currNode = currNode.next;
+//            }
+//            prevNode.next = currNode.next;
+//        }
+        
         public void display() {
             Node currNode = head;
             System.out.println("Elements: ");
@@ -86,6 +100,8 @@ public class linkedlist {
         ll.addLast(4);
         ll.display();
         ll.delete(3);
+        ll.display();
+//        ll.deleteAt(2);
         ll.display();
     }
 }

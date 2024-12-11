@@ -2,6 +2,7 @@ com\ayafitech\dsa\sorting\InsertionSort.class
 com\ayafitech\exam\linear\stack_ll.class
 com\ayafitech\test\ll\linkedlist$Node.class
 com\ayafitech\dsa\nonPrimitiveDS\non_linear_DS\BST.class
+com\ayafitech\test\ll\Node.class
 com\ayafitech\dsa\DSA.class
 com\ayafitech\dsa\nonPrimitiveDS\non_linear_DS\BST$Node.class
 com\ayafitech\test\array\queue.class
@@ -27,6 +28,7 @@ com\ayafitech\dsa\nonPrimitiveDS\Queue_LL.class
 com\ayafitech\dsa\copilot\AVLTree.class
 com\ayafitech\test\array\circularQueue.class
 com\ayafitech\dsa\nonPrimitiveDS\LinkedList.class
+com\ayafitech\test\ll\telsuko_linkedlist.class
 com\ayafitech\test\ll\linkedlist$LinkedList.class
 com\ayafitech\test\array\circularQueue$Queue.class
 com\ayafitech\test\ll\stack$Stack.class
