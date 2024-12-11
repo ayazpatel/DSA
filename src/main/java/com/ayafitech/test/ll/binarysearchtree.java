@@ -1,7 +1,7 @@
-//linkedlist
 package com.ayafitech.test.ll;
 
-public class tree {
+public class binarysearchtree {
+
     // Define the Node class
     static class Node {
 
@@ -16,17 +16,24 @@ public class tree {
         }
     }
 
-    static class Tree {
+    static class BinaryTree {
 
         Node root;
 
-//        public Node insert(Node root, int data) {
-//            Node newNode = new Node(data);
-//            if (root == null) {
-//                root = newNode;
-//                return root;
-//            }
-//        }
+        public Node insert(Node root, int data) {
+            if (root == null) {
+                root = new Node(data);
+                return root;
+            }
+
+            if (data < root.data) {
+                root.left = insert(root.left, data);
+            } else {
+                root.right = insert(root.right, data);
+            }
+
+            return root;
+        }
 
         public void preorder(Node root) {
             if (root == null) {
@@ -61,11 +68,11 @@ public class tree {
 
     public static void main(String[] args) {
         int nodes[] = {5, 1, 2, 3, 4, 6, 7, 8, 9, 10};
-        Tree bt = new Tree();
+        BinaryTree bt = new BinaryTree();
         Node root = null;
 
         for (int i = 0; i < nodes.length; i++) {
-//            root = bt.insert(root, nodes[i]);
+            root = bt.insert(root, nodes[i]);
         }
 
         System.out.println("Preorder Traversal:");
