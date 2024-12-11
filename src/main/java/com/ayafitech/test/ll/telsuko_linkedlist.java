@@ -63,6 +63,21 @@ class LinkedList {
         }
         prevNode.next = currNode.next;
     }
+    
+    public void delete(int data) {
+        Node currNode = head;
+        Node prevNode = null;
+        while (currNode != null && currNode.data != data) {
+            prevNode = currNode;
+            currNode = currNode.next;
+        }
+        if (currNode == null) {
+            System.out.println("Not Found");
+            return;
+        }
+        prevNode.next = currNode.next;
+        System.out.println("Found & Deleted");
+    }
 }
 
 public class telsuko_linkedlist {
@@ -82,6 +97,9 @@ public class telsuko_linkedlist {
         list.display();
         System.out.println();
         list.deleteAt(2);
+        list.display();
+        System.out.println();
+        list.delete(15);
         list.display();
     }
 }
