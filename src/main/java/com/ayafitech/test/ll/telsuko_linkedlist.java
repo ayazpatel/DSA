@@ -42,8 +42,16 @@ class LinkedList {
         newNode.next = head;
         head = newNode;
     }
+    public void insertAtStart(int data) {
+        Node newNode = new Node(data);
+        newNode.next = head;
+        head = newNode;
+    }
     
     public void insertAt(int index, int data) {
+        if (index == 0) {
+            insertAtStart(data);
+        }
         Node newNode = new Node(data);
         
         Node currNode = head;
@@ -55,6 +63,9 @@ class LinkedList {
     }
     
     public void deleteAt(int index) {
+        if (index == 0) {
+            head = head.next;
+        }
         Node currNode = head;
         Node prevNode = null;
         for (int i = 0; i < index; i++) {
@@ -65,6 +76,11 @@ class LinkedList {
     }
     
     public void delete(int data) {
+        if (head.data == data) {
+            System.out.println("Found & Deleted");
+            head = head.next;
+            return;
+        }
         Node currNode = head;
         Node prevNode = null;
         while (currNode != null && currNode.data != data) {
@@ -77,6 +93,22 @@ class LinkedList {
         }
         prevNode.next = currNode.next;
         System.out.println("Found & Deleted");
+    }
+    
+    public void search(int data) {
+        Node currNode = head;
+        while(currNode != null && currNode.data != data) {
+            currNode = currNode.next;
+        }
+        
+        if (currNode == null) {
+            System.out.println("Not Found " + data);
+            return;
+        }
+        
+        if (currNode.data == data) {
+            System.out.println("Found " + data + " ->["+ currNode.data + "]");
+        }
     }
 }
 
@@ -100,6 +132,12 @@ public class telsuko_linkedlist {
         list.display();
         System.out.println();
         list.delete(15);
+        list.display();
+        System.out.println();
+        list.search(20);
+        list.search(50);
+//        System.out.println();
+        list.delete(0);
         list.display();
     }
 }
